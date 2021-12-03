@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="bootstrap.css">
+  <script src="bootstrap.bundle.js"></script>
+  <link rel="stylesheet" href="home.css" type="text/css">
+  <script src="home.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <title>Apna Chorbazar</title>
+</head>
+
+<body>
+  <header class="p-3 mb-3 border-bottom" style="background-color: aqua;">
+    <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+      <i class="fa fa-bars" aria-hidden="true" style="font-size: xx-large;" id="SidebarIcon" onclick="menu()"></i>
+      <img src="images/logo3.PNG" class="logo" width="30%" style="margin-left: 5%;">
+      <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0" id="webLists">
+        <li><a href="#featureProducts" class="nav-link px-2 link-dark">Feature Products</a></li>
+        <li><a href="#BestSelling" class="nav-link px-2 link-dark">Best seller</a></li>
+        <li><a href="#ContactUs" class="nav-link px-2 link-dark">Contact us</a></li>
+        <li><a href="#aboutUs" class="nav-link px-2 link-dark">About</a></li>
+      </ul>
+
+      <form class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3" id="SearchBar">
+        <input type="search" class="form-control" placeholder="Search..." aria-label="Search">
+      </form>
+    </div>
+  </header>
+  <div class="d-flex flex-column flex-shrink-0 p-3 bg-light" id="sidebar">
+    <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto link-dark text-decoration-none">
+      <svg class="bi me-2" width="40" height="32">
+        <use xlink:href="#bootstrap"></use>
+      </svg>
+      <span class="fs-4">Sidebar</span>
+    </a>
+    <hr>
+    <ul class="nav nav-pills flex-column mb-auto">
+      <li class="nav-item">
+        <a href="#featureProducts" class="nav-link active" aria-current="page" onclick="mainContainer()">
+          <svg class="bi me-2" width="16" height="16">
+            <use xlink:href="#home"></use>
+          </svg>
+          Feature Products
+        </a>
+      </li>
+      <li>
+        <a href="#BestSelling" class="nav-link link-dark" onclick="mainContainer()">
+          <svg class="bi me-2" width="16" height="16">
+            <use xlink:href="#speedometer2"></use>
+          </svg>
+          Best seller
+        </a>
+      </li>
+      <li>
+        <a href="#ContactUs" class="nav-link link-dark" onclick="mainContainer()">
+          <svg class="bi me-2" width="16" height="16">
+            <use xlink:href="#table"></use>
+          </svg>
+          Contact us
+        </a>
+      </li>
+      <li>
+        <a href="#aboutUs" class="nav-link link-dark" onclick="mainContainer()">
+          <svg class="bi me-2" width="16" height="16">
+            <use xlink:href="#grid"></use>
+          </svg>
+          About
+        </a>
+      </li>
+    </ul>
+    <hr>
+   <!--  <div class="dropdown">
+      <a href="#" class="d-flex align-items-center link-dark text-decoration-none dropdown-toggle" id="dropdownUser2"
+        data-bs-toggle="dropdown" aria-expanded="false">
+        <img src="https://github.com/mdo.png" alt="" width="32" height="32" class="rounded-circle me-2">
+        <strong>mdo</strong>
+      </a>
+      <ul class="dropdown-menu text-small shadow" aria-labelledby="dropdownUser2">
+        <li><a class="dropdown-item" href="#">New project...</a></li>
+        <li><a class="dropdown-item" href="#">Settings</a></li>
+        <li><a class="dropdown-item" href="#">Profile</a></li>
+        <li>
+          <hr class="dropdown-divider">
+        </li>
+        <li><a class="dropdown-item" href="#">Sign out</a></li>
+      </ul>
+    </div> -->
+  </div>
+
+  <div id="mainContainer" onclick="mainContainer()"></div>
+
+
+    <div class="productSection">
+      <div class="CommonClass" onclick="grocery()" onmouseover="grocery()" onmouseleave="leave()">
+        <img src="images/grocery.png">
+        <p>Grocery <i class="fa fa-chevron-down" id="downArrow"></i><i class="fa fa-chevron-up" id="upArrow"
+            style="visibility: hidden;"></i>
+        </p>
+        <div id="groceryDD" style="width: 200%;">
+          <form class="p-2 mb-2 bg-light border-bottom">
+            <input type="search" class="form-control" autocomplete="false" placeholder="Type to filter...">
+          </form>
+          <ul class="list-unstyled mb-0">
+            <li><a class="dropdown-item d-flex align-items-center gap-2 py-2" href="#">
+                <span class="d-inline-block bg-success rounded-circle" style="width: .5em; height: .5em;"></span>
+                Action
+              </a></li>
+            <li><a class="dropdown-item d-flex align-items-center gap-2 py-2" href="#">
+                <span class="d-inline-block bg-primary rounded-circle" style="width: .5em; height: .5em;"></span>
+                Another action
+              </a></li>
+            <li><a class="dropdown-item d-flex align-items-center gap-2 py-2" href="#">
+                <span class="d-inline-block bg-danger rounded-circle" style="width: .5em; height: .5em;"></span>
+                Something else here
+              </a></li>
+            <li><a class="dropdown-item d-flex align-items-center gap-2 py-2" href="#">
+                <span class="d-inline-block bg-info rounded-circle" style="width: .5em; height: .5em;"></span>
+                Separated link
+              </a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="CommonClass" onclick="Cloths()" onmouseover="Cloths()" onmouseleave="leave2()">
+        <img src="images/cloths.png">
+        <p>Cloths <i class="fa fa-chevron-down" id="downArrow2"></i><i class="fa fa-chevron-up" id="upArrow2"
+            style="visibility: hidden;"></i></p>
+        <div id="ClothsDD" style="width: 200%;">
+          <form class="p-2 mb-2 bg-light border-bottom">
+            <input type="search" class="form-control" autocomplete="false" placeholder="Type to filter...">
+          </form>
+          <ul class="list-unstyled mb-0">
+            <li><a class="dropdown-item d-flex align-items-center gap-2 py-2" href="#">
+                <span class="d-inline-block bg-success rounded-circle" style="width: .5em; height: .5em;"></span>
+                Action
+              </a></li>
+            <li><a class="dropdown-item d-flex align-items-center gap-2 py-2" href="#">
+                <span class="d-inline-block bg-primary rounded-circle" style="width: .5em; height: .5em;"></span>
+                Another action
+              </a></li>
+            <li><a class="dropdown-item d-flex align-items-center gap-2 py-2" href="#">
+                <span class="d-inline-block bg-danger rounded-circle" style="width: .5em; height: .5em;"></span>
+                Something else here
+              </a></li>
+            <li><a class="dropdown-item d-flex align-items-center gap-2 py-2" href="#">
+                <span class="d-inline-block bg-info rounded-circle" style="width: .5em; height: .5em;"></span>
+                Separated link
+              </a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="CommonClass" onclick="Electronics()" onmouseover="Electronics()" onmouseleave="leave3()">
+        <img src="images/electronics.png">
+        <p>Electronics <i class="fa fa-chevron-down" id="downArrow3"></i><i class="fa fa-chevron-up" id="upArrow3"
+            style="visibility: hidden;"></i></p>
+        <div id="ElectronicsDD" style="width: 200%;">
+          <form class="p-2 mb-2 bg-light border-bottom">
+            <input type="search" class="form-control" autocomplete="false" placeholder="Type to filter...">
+          </form>
+          <ul class="list-unstyled mb-0">
+            <li><a class="dropdown-item d-flex align-items-center gap-2 py-2" href="#">
+                <span class="d-inline-block bg-success rounded-circle" style="width: .5em; height: .5em;"></span>
+                Action
+              </a></li>
+            <li><a class="dropdown-item d-flex align-items-center gap-2 py-2" href="#">
+                <span class="d-inline-block bg-primary rounded-circle" style="width: .5em; height: .5em;"></span>
+                Another action
+              </a></li>
+            <li><a class="dropdown-item d-flex align-items-center gap-2 py-2" href="#">
+                <span class="d-inline-block bg-danger rounded-circle" style="width: .5em; height: .5em;"></span>
+                Something else here
+              </a></li>
+            <li><a class="dropdown-item d-flex align-items-center gap-2 py-2" href="#">
+                <span class="d-inline-block bg-info rounded-circle" style="width: .5em; height: .5em;"></span>
+                Separated link
+              </a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="CommonClass" id="GoDown" onclick="Fasion()" onmouseover="Fasion()" onmouseleave="leave4()">
+        <img src="images/fasion.png" style="margin-left: 20%;">
+        <p>Fasion <i class="fa fa-chevron-down" id="downArrow4"></i><i class="fa fa-chevron-up" id="upArrow4"
+            style="visibility: hidden;"></i></p>
+        <div id="FasionDD" style="width: 200%;">
+          <form class="p-2 mb-2 bg-light border-bottom">
+            <input type="search" class="form-control" autocomplete="false" placeholder="Type to filter...">
+          </form>
+          <ul class="list-unstyled mb-0">
+            <li><a class="dropdown-item d-flex align-items-center gap-2 py-2" href="#">
+                <span class="d-inline-block bg-success rounded-circle" style="width: .5em; height: .5em;"></span>
+                Action
+              </a></li>
+            <li><a class="dropdown-item d-flex align-items-center gap-2 py-2" href="#">
+                <span class="d-inline-block bg-primary rounded-circle" style="width: .5em; height: .5em;"></span>
+                Another action
+              </a></li>
+            <li><a class="dropdown-item d-flex align-items-center gap-2 py-2" href="#">
+                <span class="d-inline-block bg-danger rounded-circle" style="width: .5em; height: .5em;"></span>
+                Something else here
+              </a></li>
+            <li><a class="dropdown-item d-flex align-items-center gap-2 py-2" href="#">
+                <span class="d-inline-block bg-info rounded-circle" style="width: .5em; height: .5em;"></span>
+                Separated link
+              </a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="CommonClass" id="GoDown" onclick="Mobile()" onmouseover="Mobile()" onmouseleave="leave5()">
+        <img src="images/mobile.png">
+        <p>Mobile <i class="fa fa-chevron-down" id="downArrow5"></i><i class="fa fa-chevron-up" id="upArrow5"
+            style="visibility: hidden;"></i></p>
+        <div id="MobileDD" style="width: 200%;">
+          <form class="p-2 mb-2 bg-light border-bottom">
+            <input type="search" class="form-control" autocomplete="false" placeholder="Type to filter...">
+          </form>
+          <ul class="list-unstyled mb-0">
+            <li><a class="dropdown-item d-flex align-items-center gap-2 py-2" href="#">
+                <span class="d-inline-block bg-success rounded-circle" style="width: .5em; height: .5em;"></span>
+                Action
+              </a></li>
+            <li><a class="dropdown-item d-flex align-items-center gap-2 py-2" href="#">
+                <span class="d-inline-block bg-primary rounded-circle" style="width: .5em; height: .5em;"></span>
+                Another action
+              </a></li>
+            <li><a class="dropdown-item d-flex align-items-center gap-2 py-2" href="#">
+                <span class="d-inline-block bg-danger rounded-circle" style="width: .5em; height: .5em;"></span>
+                Something else here
+              </a></li>
+            <li><a class="dropdown-item d-flex align-items-center gap-2 py-2" href="#">
+                <span class="d-inline-block bg-info rounded-circle" style="width: .5em; height: .5em;"></span>
+                Separated link
+              </a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="CommonClass" id="GoDown" onclick="Travel()" onmouseover="Travel()" onmouseleave="leave6()">
+        <img src="images/travel.png">
+        <p>Travel <i class="fa fa-chevron-down" id="downArrow6"></i><i class="fa fa-chevron-up" id="upArrow6"
+            style="visibility: hidden;"></i></p>
+        <div id="TravelDD" style="width: 200%;">
+          <form class="p-2 mb-2 bg-light border-bottom">
+            <input type="search" class="form-control" autocomplete="false" placeholder="Type to filter...">
+          </form>
+          <ul class="list-unstyled mb-0">
+            <li><a class="dropdown-item d-flex align-items-center gap-2 py-2" href="#">
+                <span class="d-inline-block bg-success rounded-circle" style="width: .5em; height: .5em;"></span>
+                Action
+              </a></li>
+            <li><a class="dropdown-item d-flex align-items-center gap-2 py-2" href="#">
+                <span class="d-inline-block bg-primary rounded-circle" style="width: .5em; height: .5em;"></span>
+                Another action
+              </a></li>
+            <li><a class="dropdown-item d-flex align-items-center gap-2 py-2" href="#">
+                <span class="d-inline-block bg-danger rounded-circle" style="width: .5em; height: .5em;"></span>
+                Something else here
+              </a></li>
+            <li><a class="dropdown-item d-flex align-items-center gap-2 py-2" href="#">
+                <span class="d-inline-block bg-info rounded-circle" style="width: .5em; height: .5em;"></span>
+                Separated link
+              </a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="CommonClass" id="GoDown" onclick="Toys()" onmouseover="Toys()" onmouseleave="leave7()">
+        <img src="images/toys.png">
+        <p>Toys <i class="fa fa-chevron-down" id="downArrow7"></i><i class="fa fa-chevron-up" id="upArrow7"
+            style="visibility: hidden;"></i></p>
+        <div id="ToysDD" style="width: 200%;">
+          <form class="p-2 mb-2 bg-light border-bottom">
+            <input type="search" class="form-control" autocomplete="false" placeholder="Type to filter...">
+          </form>
+          <ul class="list-unstyled mb-0">
+            <li><a class="dropdown-item d-flex align-items-center gap-2 py-2" href="#">
+                <span class="d-inline-block bg-success rounded-circle" style="width: .5em; height: .5em;"></span>
+                Action
+              </a></li>
+            <li><a class="dropdown-item d-flex align-items-center gap-2 py-2" href="#">
+                <span class="d-inline-block bg-primary rounded-circle" style="width: .5em; height: .5em;"></span>
+                Another action
+              </a></li>
+            <li><a class="dropdown-item d-flex align-items-center gap-2 py-2" href="#">
+                <span class="d-inline-block bg-danger rounded-circle" style="width: .5em; height: .5em;"></span>
+                Something else here
+              </a></li>
+            <li><a class="dropdown-item d-flex align-items-center gap-2 py-2" href="#">
+                <span class="d-inline-block bg-info rounded-circle" style="width: .5em; height: .5em;"></span>
+                Separated link
+              </a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  <hr id="lightHR">
+  <div id="slidesImages">
+    <div class="slidesImages">
+      <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
+            aria-current="true" aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+            aria-label="Slide 2"></button>
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+            aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="images/laptopSlide.jpg" class="d-block w-100">
+          </div>
+          <div class="carousel-item">
+            <img src="images/Mobileslide.jpg" class="d-block w-100">
+          </div>
+          <div class="carousel-item">
+            <img src="images/TVslides.jpg" class="d-block w-100">
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+          data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+          data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+    </div>
+  </div>
+  
+  <div id="featureProducts">
+    <h1>Feature Products</h1>
+    <div class="allProducts">
+      <div class="ProductsDiv">
+        <img src="images/GamingLaptop.jpg">
+        <h4>Best gaming laptops</h4>
+        <i class="fa fa-star"></i>
+        <i class="fa fa-star"></i>
+        <i class="fa fa-star"></i>
+        <i class="fa fa-star"></i>
+        <i class="fa fa-star"></i><br>
+        <button>Add to Cart</button>
+
+      </div>
+      <div class="ProductsDiv">
+        <img src="images/TVProducts.jpg">
+        <h4>Superb HD Clarity TV's</h4>
+        <i class="fa fa-star"></i>
+        <i class="fa fa-star"></i>
+        <i class="fa fa-star"></i>
+        <i class="fa fa-star"></i>
+        <i class="fa fa-star"></i><br>
+        <button>Add to Cart</button>
+      </div>
+      <div class="ProductsDiv">
+        <img src="images/AppliancesProduct.jpg">
+        <h4>Appliances with new gadgets</h4>
+        <i class="fa fa-star"></i>
+        <i class="fa fa-star"></i>
+        <i class="fa fa-star"></i>
+        <i class="fa fa-star"></i>
+        <i class="fa fa-star"></i><br>
+        <button style="margin-top: 10%;">Add to Cart</button>
+      </div>
+      <div class="ProductsDiv">
+        <img src="images/MobileProduct.jpg">
+        <h4>4X faster mobile phones</h4>
+        <i class="fa fa-star"></i>
+        <i class="fa fa-star"></i>
+        <i class="fa fa-star"></i>
+        <i class="fa fa-star"></i>
+        <i class="fa fa-star"></i><br>
+        <button>Add to Cart</button>
+      </div>
+    </div>
+  </div>
+  <div id="BestSelling">
+    <h1>Best Selling Products</h1>
+    <div class="allProducts">
+      <div class="ProductsDiv">
+        <img src="images/GamingLaptop.jpg">
+        <h4>Best gaming laptops</h4>
+        <i class="fa fa-star"></i>
+        <i class="fa fa-star"></i>
+        <i class="fa fa-star"></i>
+        <i class="fa fa-star"></i>
+        <i class="fa fa-star"></i><br>
+        <button>Add to Cart</button>
+
+      </div>
+      <div class="ProductsDiv">
+        <img src="images/TVProducts.jpg">
+        <h4>Superb HD Clarity TV's</h4>
+        <i class="fa fa-star"></i>
+        <i class="fa fa-star"></i>
+        <i class="fa fa-star"></i>
+        <i class="fa fa-star"></i>
+        <i class="fa fa-star"></i><br>
+        <button>Add to Cart</button>
+      </div>
+      <div class="ProductsDiv">
+        <img src="images/AppliancesProduct.jpg">
+        <h4>Appliances with new gadgets</h4>
+        <i class="fa fa-star"></i>
+        <i class="fa fa-star"></i>
+        <i class="fa fa-star"></i>
+        <i class="fa fa-star"></i>
+        <i class="fa fa-star"></i><br>
+        <button style="margin-top: 10%;">Add to Cart</button>
+      </div>
+      <div class="ProductsDiv">
+        <img src="images/MobileProduct.jpg">
+        <h4>4X faster mobile phones</h4>
+        <i class="fa fa-star"></i>
+        <i class="fa fa-star"></i>
+        <i class="fa fa-star"></i>
+        <i class="fa fa-star"></i>
+        <i class="fa fa-star"></i><br>
+        <button>Add to Cart</button>
+      </div>
+    </div>
+  </div>
+  <div id="aboutUs">
+    <div class="innerAbout">
+      <h1>About Us</h1>
+      <p>We are the company based in Mumbai where we sell the products from the best well known bazar which is Mumbai's famouse Chorbazar, we sell their products all over the India and outside.</p>
+
+    </div>
+  </div>
+  <div id="ContactUs">
+    <div class="ContactDetails">
+      <h1>Contact us</h1>
+      <p>If you've any query regarding the product or any technical difficulty or id you've any suggestion please feel free to <br> contact us, we'll reach you in 24 Hrs.<br>Thank you.</p>
+       <p><i class="fa fa-globe" aria-hidden="true"></i>  Mumbai, Maharashtra, India</p>
+       <p><i class="fa fa-phone" aria-hidden="true"></i>  +91 8237366101</p>
+       <p><i class="fa fa-envelope" aria-hidden="true"></i> rp06031998@gmail.com</p>
+       <p><i class="fa fa-wpforms" aria-hidden="true"></i> <a href="http://rdpwebservices.ml/Home.html?i=1">Visit our site</a></p>
+    </div>
+    <div class="CustomerDetails">
+      <form action="">
+        <label for="exampleInputEmail1" class="form-label">Name :</label>
+        <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+        <label for="exampleInputEmail1" class="form-label">Email address :</label>
+        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+        <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+        <label for="exampleInputEmail1" class="form-label" style="margin-top: 1%;">Message :</label>
+        <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+        <div id="emailHelp" class="form-text">We'll reach you out within 24Hrs.</div> <br>
+        <button class="btn-success" style="border-radius: 10px;">Submit</button>
+      </form>
+    </div>
+  </div>
+
+  <footer class="py-3 my-4">
+    <ul class="nav justify-content-center border-bottom pb-3 mb-3">
+      <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Home</a></li>
+      <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Features</a></li>
+      <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Pricing</a></li>
+      <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">FAQs</a></li>
+      <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">About</a></li>
+    </ul>
+    <p class="text-center text-muted">© 2021 Company, Inc</p>
+  </footer>
+</body>
+
+</html>

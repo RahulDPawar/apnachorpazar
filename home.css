@@ -1,0 +1,230 @@
+body{
+    width:100%;
+    margin: 0;
+    overflow-x: auto;
+}
+.mainDiv{
+    width: 50%;
+}
+#sidebar{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    height: 100%;
+    width: 70%;
+    visibility: hidden;
+}
+#SidebarIcon{
+    font-size: x-large;
+    display: none;
+}
+#mainContainer{
+    position: absolute;
+    top: 0;
+    right: 0;
+    opacity: 0.1;
+    width: 30%;
+    height: 100%;
+    visibility: hidden;
+}
+.productSection{
+    display: flex;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+}
+.CommonClass{
+    width: 14.28%;
+    cursor: pointer;
+}
+.productSection p{
+    text-align: center;
+    font-weight: bolder;
+}
+.CommonClass img{
+    margin-left: 15%;
+    height: 60px;
+}
+#lightHR{
+    opacity: 0.2;
+}
+.ProductDownMedia{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+.DownMedia{
+    display: none;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+}
+.slidesImages{
+    height: 300px;
+    width: 98%;
+    margin-left: auto;
+    margin-right: auto;
+}
+.slidesImages img{
+    height: 250px;
+}
+#carouselExampleFade{
+    width: 98%;
+    margin-left: auto;
+    margin-right: auto;
+}
+#groceryDD, #ClothsDD,#ElectronicsDD,#FasionDD,#MobileDD,#TravelDD,#ToysDD{
+    background-color: white;
+    border: solid #eee 2px ;
+    border-radius: 15px;
+    margin-top: 16%;
+    margin-left: 5%;
+    width: 20%;
+    display: none;
+}
+#featureProducts{
+    text-align: center;
+    width: 100%;
+}
+.allProducts{
+    width: 90%;
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 5%;
+}
+.ProductsDiv{
+    height: 20%;
+    width: 22%;
+    margin-left: 2%;
+}
+.ProductsDiv img:hover{
+    -webkit-transform: scale(1.2);
+    -ms-transform: scale(1.2);
+    transform: scale(1.2);
+}
+.ProductsDiv img{
+    margin-top: 4%;
+    height: 200px;
+    width: 90%;
+    cursor: pointer;
+}
+.ProductsDiv button{
+    margin-top: 20%;
+    background-color: turquoise;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    margin-bottom: 4%;
+    font-weight: bolder;
+    padding: 10px;
+}
+.ProductsDiv button:hover{
+    color: #466781;
+    border: #52aefa solid 5px;
+    background:#fff;
+  }
+.ProductsDiv h4{
+    margin-top: 5%;
+}
+.stop-scrolling {
+    height: 100%;
+    overflow: hidden;
+}
+#BestSelling{
+    margin-top: 5%;
+    text-align: center;
+    width: 100%;
+}
+#ContactUs{
+    margin-top: 7%;
+    display: flex;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+}
+.ContactDetails{
+    width: 50%;
+}
+.ContactDetails p{
+    font-size: 20px;    
+    font-family: Comic Sans MS;
+}
+.ContactDetails i{
+    font-size: xx-large;
+}
+.CustomerDetails{
+    border:solid rgb(15, 158, 158) 2px;
+    padding: 2%;
+    width: 50%;
+    background-color: aqua;
+    border-radius: 15px;
+}
+#aboutUs{
+    padding-top: 10%;
+    padding-bottom: 10%;
+    width: 100%;
+    text-align: center;
+    margin-top: 6%;
+    background-image: url(images/about3.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.innerAbout{
+    color: white;
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+}
+@media screen and (max-width: 780px) {
+    .logo{
+        width: 80%;
+    }
+    .CommonClass{
+        width: 25%;
+    }
+    .CommonClass{
+        width: 30%;
+        margin-left: 5%;
+    }
+    .CommonClass img{
+        width: 100px;
+        margin-right: 5%;
+    }
+    .productSection{
+        overflow-x: auto;
+    }
+    .CommonClass p{
+        font-size: 15px;
+    }
+    #SidebarIcon{
+        display: block;
+    }
+    .allProducts{
+        display: block;
+    }
+    .ProductsDiv{
+        width: 100%;
+    }
+    #ContactUs{
+        display: block;
+    }
+    .ContactDetails{
+        width: 100%;
+    }
+    .CustomerDetails{
+        width: 100%;
+    }
+    header ul{
+        display: none;
+    }
+    #SearchBar{
+        margin-top: 5%;
+    }
+}
+@media screen and (max-width: 400px) {
+    .productSection{
+        overflow-x: auto;
+    }
+}
+
