@@ -6,6 +6,33 @@ body{
 .mainDiv{
     width: 50%;
 }
+#SearchBar{
+    width: 20%; 
+}
+#User,#Cart,#Notification{
+    color: rgb(53, 63, 31);
+    cursor: pointer;
+    margin-top: 10px;
+    margin-left: 15%;
+    font-size: 200%;
+}
+#User:hover,#Cart:hover,#Notification:hover{
+    -webkit-transform: scale(1.2);
+    -ms-transform: scale(1.2);
+    transform: scale(1.2);
+}
+#UserMobile,#NotificationMobile,#CartMobile{
+    display: none;
+    cursor: pointer;
+}
+#UserMobile:hover,#NotificationMobile:hover,#CartMobile:hover{
+    -webkit-transform: scale(1.2);
+    -ms-transform: scale(1.2);
+    transform: scale(1.2);
+}
+#webLists{
+    margin-left: 5%;
+}
 #sidebar{
     position: absolute;
     top: 0;
@@ -108,6 +135,7 @@ body{
     height: 200px;
     width: 90%;
     cursor: pointer;
+    transition: 100ms ease-in-out;
 }
 .ProductsDiv button{
     margin-top: 20%;
@@ -118,6 +146,7 @@ body{
     margin-bottom: 4%;
     font-weight: bolder;
     padding: 10px;
+    transition: 100ms ease-in-out;
 }
 .ProductsDiv button:hover{
     color: #466781;
@@ -211,8 +240,10 @@ body{
     }
     .ContactDetails{
         width: 100%;
+        margin-top: 20%;
     }
     .CustomerDetails{
+        margin-top: 20%;
         width: 100%;
     }
     header ul{
@@ -221,10 +252,25 @@ body{
     #SearchBar{
         margin-top: 5%;
     }
-}
-@media screen and (max-width: 400px) {
-    .productSection{
-        overflow-x: auto;
+    #webLists{
+        display: none;
+    }
+    .logo{
+        width: 50%;
+    }
+    .SidebarIcon{
+        font-size: xx-large;
+    }
+    #UserMobile,#NotificationMobile,#CartMobile{
+        margin-left: 4%;
+        font-size: 130%;
+        display: flex;
+    }
+    #User,#Cart,#Notification{
+        display: none;
+    }
+    #SearchBar{
+        width: 100%;
     }
 }
 
