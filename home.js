@@ -1,3 +1,23 @@
+window.onscroll = function(){myFunction()};
+var x = window.matchMedia("(max-width: 700px)");
+function myFunction(){
+    if(x.matches){
+        if(document.body.onscroll > 80 || document.documentElement.scrollTop > 80){
+            document.getElementById('logo').style.display = 'none';
+            document.getElementById('UserMobile').style.display = 'none';
+            document.getElementById('NotificationMobile').style.display = 'none';
+            document.getElementById('CartMobile').style.display = 'none';
+            document.getElementById('SidebarIcon').style.display = 'none';
+            document.getElementById('searchFeild').style.width = '100%';
+        }else{
+            document.getElementById('logo').style.display = 'flex';
+            document.getElementById('UserMobile').style.display = 'inline-block';
+            document.getElementById('SidebarIcon').style.display = 'flex';
+            document.getElementById('NotificationMobile').style.display = 'inline-block';
+            document.getElementById('CartMobile').style.display = 'inline-block';
+        }
+    }
+}
 function menu(){
     document.getElementById('sidebar').style.visibility = "visible";
     document.getElementById('mainContainer').style.visibility="visible";
